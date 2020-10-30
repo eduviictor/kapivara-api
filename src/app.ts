@@ -1,16 +1,9 @@
 import express from 'express';
+import { router } from './routes';
 
 const app = express();
 
-const port = 3000;
+app.use(express.json());
+app.use(router);
 
-app.get('/', (req, res) => {
-  res.send('Hello World');
-});
-
-app.listen(port, (err?: any): void => {
-  if (err) {
-    return console.error(err);
-  }
-  return console.log(`server is listening on ${port}`);
-});
+export { app };
