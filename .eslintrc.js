@@ -31,6 +31,7 @@ module.exports = {
     'import/extensions': 'off',
     'no-console': 'off',
     'import/prefer-default-export': 'off',
-    'no-useless-constructor': 'off'
+    'no-useless-constructor': 'off',
+    camelcase: 'off'
   }
 };

@@ -3,12 +3,14 @@ export interface IHttpResponse {
   data?: any;
 }
 
-export type IApiProvider = {
+export interface IApiProvider {
   index(endpoint: string): Promise<IHttpResponse>;
-};
+  store(endpoint: string, data: any): Promise<IHttpResponse>;
+}
 
 export interface IApiConfigs {
   url: string;
-  params: string;
-  token: string;
+  params?: any;
+  token?: string;
+  headers?: any;
 }
