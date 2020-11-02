@@ -10,7 +10,7 @@
   },
   "scripts": {
     "postinstall": "npm run tsc",
-    "start": "npm run tsc && node dist/server.js",
+    "start": "node dist/server.js",
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .ts,.js"
