@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  api:
+    image: node:14
+    container_name: kapivara
+    working_dir: /kapivara
+    command: bash -c "yarn && yarn start"
+    env_file: .env
+    volumes:
+      - .:/kapivara
+      - ./package.json:/kapivara/package.json
+    ports:
+      - '3000:3000'
+    restart: unless-stopped
