@@ -9,8 +9,8 @@
     "url": "https://github.com/eduviictor"
   },
   "scripts": {
-    "deploy": "yarn install && yarn start",
-    "start": "yarn tsc && node dist/server.js",
+    "postinstall": "npm run tsc",
+    "start": "npm run tsc && node dist/server.js",
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .ts,.js"
@@ -40,5 +40,8 @@
     "js2xmlparser": "^4.0.1",
     "mongoose": "^5.10.11",
     "querystring": "^0.2.0"
+  },
+  "engines": {
+    "node": "v14.15.0"
   }
 }
