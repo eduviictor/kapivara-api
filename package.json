@@ -10,7 +10,8 @@
   },
   "scripts": {
     "deploy": "yarn install && yarn start",
-    "start": "tsc && node dist/server.js",
+    "start": "yarn tsc && node dist/server.js",
+    "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .ts,.js"
   },
