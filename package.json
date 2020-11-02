@@ -13,7 +13,8 @@
     "start": "node dist/server.js",
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . --ext .ts,.js"
+    "lint": "eslint . --ext .ts,.js",
+    "build": "yarn tsc"
   },
   "devDependencies": {
     "@types/cors": "^2.8.8",
