@@ -14,7 +14,7 @@ export class InsertDealERPUseCase {
       cliente: {
         nome: data.person_name,
         tipoPessoa: 'J',
-        email: data.person_id.email.value
+        email: data.person_id.email[0].value
       },
       itens: [
         {

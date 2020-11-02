@@ -3,7 +3,7 @@ export type IEmail = {
 };
 
 export interface IPersonId {
-  email: IEmail;
+  email: Array<IEmail>;
 }
 
 export interface IInsertDealERPRequestDTO {

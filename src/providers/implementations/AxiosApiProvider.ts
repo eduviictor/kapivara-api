@@ -13,18 +13,38 @@ export class AxiosApiProvider implements IApiProvider {
   }
 
   async index(endpoint: string): Promise<IHttpResponse> {
-    const response = await this.api.get(endpoint);
-    return {
-      status: response.status,
-      data: response.data
-    };
+    try {
+      const response = await this.api.get(endpoint);
+      return {
+        status: response.status,
+        data: response.data
+      };
+    } catch (err) {
+      throw new Error(err);
+    }
+  }
+
+  async show(endpoint: string): Promise<IHttpResponse> {
+    try {
+      const response = await this.api.get(endpoint);
+      return {
+        status: response.status,
+        data: response.data
+      };
+    } catch (err) {
+      throw new Error(err);
+    }
   }
 
   async store(endpoint: string, data: any): Promise<IHttpResponse> {
-    const response = await this.api.post(endpoint, data);
-    return {
-      status: response.status,
-      data: response.data
-    };
+    try {
+      const response = await this.api.post(endpoint, data);
+      return {
+        status: response.status,
+        data: response.data
+      };
+    } catch (err) {
+      throw new Error(err);
+    }
   }
 }
