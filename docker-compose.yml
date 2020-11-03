@@ -2,10 +2,10 @@ version: '3.8'
 
 services:
   api:
-    image: node:14
+    image: node:14.14.0
     container_name: kapivara
     working_dir: /kapivara
-    command: bash -c "yarn && yarn start"
+    command: bash -c "yarn && yarn build && yarn start"
     env_file: .env
     volumes:
       - .:/kapivara
